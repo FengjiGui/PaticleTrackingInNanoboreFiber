@@ -30,8 +30,9 @@ from skimage import io
 import time
 
 # In[read image]
-# frames = gray(pims.open('x:/xxx/*.tif')) # read the image stack from the path where you save the rawdata. Downloading link of the rawdata can be found in "README".
-data_file_name = r"\\mars\usr\FA2_Faseroptik\FAG24_Faseropt_Systeme\Foerster\Data\Fengji\08.04.2021\frames stack.tif"
+# The download information of the rawdata can be found in "README".
+# read the image stack from the path where you save the rawdata. 
+data_file_name = r"\xxx\frames stack.tif"
 
 read_start = time.time()
 
@@ -71,4 +72,4 @@ tm = t[t['particle'] ==0] # choose the data of particle No.0
 plt.plot(tm['frame'],tm['x']-np.mean(tm['x'])) # plot the trajectory of the particle in the transmision direction of the fiber  
 plt.xlabel('frames')
 plt.ylabel('z-positions(pixel)')
-#np.savetxt(r'x:\xxx\data.txt',f)  #save the data list as txt file waiting for further process 
+#np.savetxt(r'x:\xxx\data.txt',tm)  #save the data list as txt file waiting for further process 
