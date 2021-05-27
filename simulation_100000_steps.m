@@ -75,4 +75,4 @@ loglog(nf0,avg_rel_D');hold on;
 loglog(nf0,minu);hold on;
 loglog(nf0,plus);hold on
 xlabel('N_f');
-ylabel('relative error of ¦ÄD')
+ylabel('relative error of std_D')
