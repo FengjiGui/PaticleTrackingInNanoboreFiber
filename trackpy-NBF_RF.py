@@ -72,4 +72,4 @@ tm = t[t['particle'] ==0] # choose the data of particle No.0
 plt.plot(tm['frame'],tm['x']-np.mean(tm['x'])) # plot the trajectory of the particle in the transmision direction of the fiber  
 plt.xlabel('frames')
 plt.ylabel('z-positions(pixel)')
-#np.savetxt(r'x:\xxx\data.txt',tm)  #save the data list as txt file waiting for further process 
+np.savetxt(r'x:\xxx\data.txt',tm)  #save the data list as txt file waiting for further process 
