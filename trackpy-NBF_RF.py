@@ -30,7 +30,7 @@ from skimage import io
 import time
 
 # In[read image]
-# frames = gray(pims.open('D:/frames/gold-2020-8-6/rcd5-0,2ms/*.tif')) # read the image from the path
+# frames = gray(pims.open('x:/xxx/*.tif')) # read the image stack from the path where you save the rawdata. Downloading link of the rawdata can be found in "README".
 data_file_name = r"\\mars\usr\FA2_Faseroptik\FAG24_Faseropt_Systeme\Foerster\Data\Fengji\08.04.2021\frames stack.tif"
 
 read_start = time.time()
