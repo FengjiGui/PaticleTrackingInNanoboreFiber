@@ -1,6 +1,6 @@
 clc;clear;
 T=dlmread('x:\xxx\data.txt');%  load the data list of the trajectory
-nf=500;                     %  choose the length of the sub-trajectory, in the manuscript, nf=[100 200 500 1000 2000 5000 10000 20000 50000 100000];
+nf=500;                      %  choose the length of the sub-trajectory, in the manuscript, nf=[100 200 500 1000 2000 5000 10000 20000 50000 100000];
 ft=0.0004032;                %  frame time 
 kb =1.3807e-23;              %  Boltzmann constant
 Tem=293.15;                  %  room temperature
