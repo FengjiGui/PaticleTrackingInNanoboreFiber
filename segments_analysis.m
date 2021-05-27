@@ -42,8 +42,8 @@ xlabel('diameter [nm]');
 ylabel('counts');
 
 %%%%%%%%%%%%%%% The data points in Figure 5(a) and (b)
-std_d=std(2*a)                  % standard deviation of the measured diameter 
-avg_d=mean(2*a)                 % mean value of the measured diameter 
+std_d=std(dz_correct*1e9)       % standard deviation of the hindrance corrected diameter 
+avg_d=mean(dz_correct*1e9)      % mean value of the hindrance corrected diameter 
 std_D=std(D_fit)                % standard deviation of the measured D 
 avg_D=mean(D_fit)               % mean value of the measured D
 std_D/avg_D                     % relative standard deviation of the measured D
