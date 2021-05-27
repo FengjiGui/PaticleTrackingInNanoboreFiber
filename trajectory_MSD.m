@@ -1,5 +1,5 @@
 clc;clear;
-T=dlmread('D:\frames\xyz\rcd5-0,2ms.txt');%  load the data list of the trajectory
+T=dlmread('x:\xxx\data.txt');%  load the data list of the trajectory
 x=T(:,2)*72.6e-9;            %  z-position of the trajectory, 72.6e-9 is the pixel scale, [m/pixel]
 N0=length(x);
 x1=x(1:N0-1)-x(1+1:N0);      % lag=1;
