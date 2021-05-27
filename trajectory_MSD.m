@@ -1,6 +1,6 @@
 clc;clear;
-T=dlmread('x:\xxx\data.txt');%  load the data list of the trajectory
-x=T(:,2)*72.6e-9;            %  z-position of the trajectory
+T=dlmread('D:\frames\xyz\rcd5-0,2ms.txt');%  load the data list of the trajectory
+x=T(:,2)*72.6e-9;            %  z-position of the trajectory, 72.6e-9 is the pixel scale, [m/pixel]
 N0=length(x);
 x1=x(1:N0-1)-x(1+1:N0);      % lag=1;
 x10=x(1:N0-10)-x(10+1:N0);    % lag=10;
@@ -12,7 +12,8 @@ histogram(x20*1e6,60,'FaceAlpha',0.4,'EdgeAlpha',0.4);
 xlabel('z-displacement [um]'); 
 ylabel('counts');
 legend('lag=1','lag=10','lag=20'); 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% MSD fitting
 
 ft=0.0004032;                %  frame time
 kb =1.3807e-23;              %  Boltzmann constant
@@ -22,7 +23,7 @@ lag=12;                      %  lags in MSD
 for k=1:lag
     lag_time(k)=ft*k;
     sqx=x(1:N0-k)-x(k+1:N0);
-    msd(k)=mean(sqx.^2); %%%%%%%%%%%%%  MSD4.3736882181431e-08  4.90953408505219e-12     -7.51677426692658e-15
+    msd(k)=mean(sqx.^2); 
 end
 par=polyfit(lag_time(1:2),msd(1:2),1);%  linear fitting to MSD with the first 2 points
 D_fit=0.5*par(1);
