@@ -7,4 +7,4 @@ To conduct the data analysis, there are three steps:
     then you can get the main results in Fig.2, Fig.3, Fig.4 and Fig.5 of the manuscript.
 The Matlab code "simulation_100000_steps" can be used to produce the simulation curves in Fig.5(b).
 Please note that the Matlab function "hindrance_factor_function" needs to be saved in the same file before you run the codes above. 
-The Python codes require at least 32GB memory. Pyhthon 3.7 and Matlab R2016a can work with them.
+The Python codes require at least 32GB memory for this data. Pyhthon 3.7 and Matlab R2016a can work with them.
